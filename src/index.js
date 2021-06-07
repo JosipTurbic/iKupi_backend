@@ -38,13 +38,20 @@ app.use(bodyParser.urlencoded({extended: false}));
 const productRoutes = require("./routes/product");
 const categoryRoutes = require("./routes/category");
 const userRoutes = require("./routes/auth");
+const addressRoutes = require("./routes/address");
+const paymentRoutes = require("./routes/payment");
+const orderRoutes = require("./routes/order");
+const searchRoutes = require("./routes/search");
 
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", userRoutes);
+app.use("/api", addressRoutes);
+app.use("/api", paymentRoutes);
+app.use("/api", orderRoutes);
+app.use("/api", searchRoutes);
 
 
-//Okvirne rute koje će vjerojatno biti osjetno drugačije
 app.get('/', (req, res) => {  
     res.json({ }); //transport, da preko stringa mozemo prebacivati komplicirane js objekte!!
 });
