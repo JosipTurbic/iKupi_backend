@@ -48,6 +48,87 @@ router.get("/products", async (req, res) =>{
     }
 })
 
+//GET- dobiti proizvode po kategorijama 
+router.get("/products/pice", async (req, res) =>{
+    try{
+        let products = await Product.find({ category:"60954f3168989715f47d1952" }).populate("category").exec();
+        res.json({
+            success: true,
+            products: products
+        });
+    } catch (err){
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+
+    }
+})
+
+router.get("/products/hrana", async (req, res) =>{
+    try{
+        let products = await Product.find({ category:"60954f2668989715f47d1951" }).populate("category").exec();
+        res.json({
+            success: true,
+            products: products
+        });
+    } catch (err){
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+
+    }
+})
+
+router.get("/products/sport", async (req, res) =>{
+    try{
+        let products = await Product.find({ category:"60b5ebeadf449b3bcc3b9066" }).populate("category").exec();
+        res.json({
+            success: true,
+            products: products
+        });
+    } catch (err){
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+
+    }
+})
+
+router.get("/products/slatkisi", async (req, res) =>{
+    try{
+        let products = await Product.find({ category:"60b5ec12df449b3bcc3b9067" }).populate("category").exec();
+        res.json({
+            success: true,
+            products: products
+        });
+    } catch (err){
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+
+    }
+})
+
+router.get("/products/higijena", async (req, res) =>{
+    try{
+        let products = await Product.find({ category:"60b5ec6bdf449b3bcc3b9068" }).populate("category").exec();
+        res.json({
+            success: true,
+            products: products
+        });
+    } catch (err){
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+
+    }
+})
+
 
 //GET- dobiti samo jedan proizvod
 
