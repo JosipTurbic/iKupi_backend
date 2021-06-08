@@ -12,7 +12,7 @@ dotenv.config();
 
 
 const app = express()  // instanciranje aplikacije
-const port = 3000 // port na kojem će web server slušati
+const port = 3000
 
 mongoose.connect(
 process.env.DATABASE, 
