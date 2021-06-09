@@ -22,12 +22,12 @@ ProductSchema.plugin(mongooseAlgolia, {
     debug: true
   });
   
-  let Model = mongoose.model("Product", ProductSchema);
-  Model.SyncToAlgolia();
-  Model.SetAlgoliaSettings({
-    searchableAttributes: ["title"]
-  });
+ // let Model = mongoose.model("Product", ProductSchema);
+  //Model.SyncToAlgolia();
+  //Model.SetAlgoliaSettings({
+   // searchableAttributes: ["title"]
+  //});
   
 
-module.exports = Model;
+//module.exports = Model;
 
