@@ -15,19 +15,19 @@ const ProductSchema = new Schema({
 ProductSchema.plugin(mongooseAlgolia, {
     appId: process.env.ALGOLIA_APP_ID,
     apiKey: process.env.ALGOLIA_SECRET,
-    indexName: "ikupi",
+    indexName: process.env.ALGOLIA_INDEX,
   
     selector: "title _id photo description price",
    
     debug: true
   });
   
- // let Model = mongoose.model("Product", ProductSchema);
-  //Model.SyncToAlgolia();
-  //Model.SetAlgoliaSettings({
-   // searchableAttributes: ["title"]
-  //});
+  let Model = mongoose.model("Product", ProductSchema);
+  Model.SyncToAlgolia();
+  Model.SetAlgoliaSettings({
+   searchableAttributes: ["title"]
+  });
   
 
-//module.exports = Model;
+module.exports = Model;
 
