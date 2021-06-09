@@ -15,7 +15,7 @@ const app = express()  // instanciranje aplikacije
 const port = process.env.PORT || 3000;
 
 mongoose.connect(
-    'mongodb+srv://root:0vh8247RC4rzrVzB@ikupi.dkzba.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', 
+'mongodb+srv://root:0vh8247RC4rzrVzB@ikupi.dkzba.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', 
 {useNewUrlParser: true, useUnifiedTopology: true},
 
 
