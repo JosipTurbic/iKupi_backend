@@ -15,7 +15,7 @@ const ProductSchema = new Schema({
 ProductSchema.plugin(mongooseAlgolia, {
     appId: process.env.ALGOLIA_APP_ID,
     apiKey: process.env.ALGOLIA_SECRET,
-    indexName: process.env.ALGOLIA_INDEX,
+    indexName: "ikupi",
   
     selector: "title _id photo description price",
    
